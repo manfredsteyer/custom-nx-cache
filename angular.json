@@ -91,33 +91,6 @@
         }
       }
     },
-    "flight-app-e2e": {
-      "root": "apps/flight-app-e2e",
-      "sourceRoot": "apps/flight-app-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/flight-app-e2e/cypress.json",
-            "tsConfig": "apps/flight-app-e2e/tsconfig.e2e.json",
-            "devServerTarget": "flight-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "flight-app:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/flight-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/flight-app-e2e/**/*"]
-          }
-        }
-      }
-    },
     "dashboard": {
       "projectType": "application",
       "schematics": {},
@@ -201,33 +174,6 @@
           "options": {
             "jestConfig": "apps/dashboard/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "dashboard-e2e": {
-      "root": "apps/dashboard-e2e",
-      "sourceRoot": "apps/dashboard-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/dashboard-e2e/cypress.json",
-            "tsConfig": "apps/dashboard-e2e/tsconfig.e2e.json",
-            "devServerTarget": "dashboard:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "dashboard:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/dashboard-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/dashboard-e2e/**/*"]
           }
         }
       }
@@ -316,72 +262,6 @@
         }
       }
     },
-    "flight-admin-e2e": {
-      "root": "apps/flight-admin-e2e",
-      "sourceRoot": "apps/flight-admin-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/flight-admin-e2e/cypress.json",
-            "tsConfig": "apps/flight-admin-e2e/tsconfig.e2e.json",
-            "devServerTarget": "flight-admin:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "flight-admin:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/flight-admin-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/flight-admin-e2e/**/*"]
-          }
-        }
-      }
-    },
-    "logger-lib": {
-      "projectType": "library",
-      "root": "libs/logger-lib",
-      "sourceRoot": "libs/logger-lib/src",
-      "prefix": "flight-workspace",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/logger-lib/tsconfig.lib.json",
-            "project": "libs/logger-lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "libs/logger-lib/ng-package.prod.json",
-              "tsConfig": "libs/logger-lib/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/logger-lib/tsconfig.lib.json",
-              "libs/logger-lib/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/logger-lib/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/logger-lib/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "schematics": {}
-    },
     "external": {
       "projectType": "application",
       "schematics": {},
@@ -460,92 +340,6 @@
           }
         }
       }
-    },
-    "external-e2e": {
-      "root": "apps/external-e2e",
-      "sourceRoot": "apps/external-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/external-e2e/cypress.json",
-            "tsConfig": "apps/external-e2e/tsconfig.e2e.json",
-            "devServerTarget": "external:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "external:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/external-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/external-e2e/**/*"]
-          }
-        }
-      }
-    },
-    "flight-lib": {
-      "projectType": "library",
-      "root": "libs/flight-lib",
-      "sourceRoot": "libs/flight-lib/src",
-      "prefix": "flight-workspace",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/flight-lib/tsconfig.lib.json",
-            "project": "libs/flight-lib/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/flight-lib/tsconfig.lib.json",
-              "libs/flight-lib/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/flight-lib/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/flight-lib/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "dashboard-lib": {
-      "projectType": "library",
-      "root": "libs/dashboard-lib",
-      "sourceRoot": "libs/dashboard-lib/src",
-      "prefix": "flight-workspace",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/dashboard-lib/tsconfig.lib.json",
-              "libs/dashboard-lib/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/dashboard-lib/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/dashboard-lib/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "schematics": {}
     },
     "luggage-domain": {
       "projectType": "library",
@@ -684,33 +478,6 @@
         }
       }
     },
-    "luggage-e2e": {
-      "root": "apps/luggage-e2e",
-      "sourceRoot": "apps/luggage-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/luggage-e2e/cypress.json",
-            "tsConfig": "apps/luggage-e2e/tsconfig.e2e.json",
-            "devServerTarget": "luggage:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "luggage:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/luggage-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/luggage-e2e/**/*"]
-          }
-        }
-      }
-    },
     "luggage-feature-checkin": {
       "projectType": "library",
       "root": "libs/luggage/feature-checkin",
@@ -791,6 +558,149 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/luggage/feature-report-loss/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-logger-lib": {
+      "projectType": "library",
+      "root": "libs/shared/logger-lib",
+      "sourceRoot": "libs/shared/logger-lib/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/shared/logger-lib/tsconfig.lib.json",
+            "project": "libs/shared/logger-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/shared/logger-lib/ng-package.prod.json",
+              "tsConfig": "libs/shared/logger-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/logger-lib/tsconfig.lib.json",
+              "libs/shared/logger-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/logger-lib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/logger-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "flights-flight-lib": {
+      "projectType": "library",
+      "root": "libs/flights/flight-lib",
+      "sourceRoot": "libs/flights/flight-lib/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/flights/flight-lib/tsconfig.lib.json",
+            "project": "libs/flights/flight-lib/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/flights/flight-lib/tsconfig.lib.json",
+              "libs/flights/flight-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/flights/flight-lib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/flights/flight-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "dashboard-dashboard-lib": {
+      "projectType": "library",
+      "root": "libs/dashboard/dashboard-lib",
+      "sourceRoot": "libs/dashboard/dashboard-lib/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dashboard/dashboard-lib/tsconfig.lib.json",
+              "libs/dashboard/dashboard-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/dashboard/dashboard-lib/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/dashboard/dashboard-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-auth-lib": {
+      "projectType": "library",
+      "root": "libs/shared/auth-lib",
+      "sourceRoot": "libs/shared/auth-lib/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/auth-lib/tsconfig.lib.json",
+            "project": "libs/shared/auth-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/auth-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/auth-lib/tsconfig.lib.json",
+              "libs/shared/auth-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/auth-lib/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/auth-lib/jest.config.js",
             "passWithNoTests": true
           }
         }

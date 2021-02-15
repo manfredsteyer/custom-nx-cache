@@ -19,7 +19,7 @@ import { DashboardTileModule } from './dashboard-tile/dashboard-tile.module';
 import { TabsPageComponent } from './tabs-page/tabs-page.component';
 import { TabsModule } from './tabs/tabs.module';
 import { DemoModule } from './demo/demo.module';
-import { DashboardLibModule } from '@flight-workspace/dashboard-lib';
+import { DashboardLibModule } from '@flight-workspace/dashboard/dashboard-lib';
 
 @NgModule({
    imports: [

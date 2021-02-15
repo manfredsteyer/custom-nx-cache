@@ -16,16 +16,23 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flight-workspace/logger-lib": ["libs/logger-lib/src/index.ts"],
-      "@flight-workspace/flight-lib": ["libs/flight-lib/src/index.ts"],
-      "@flight-workspace/dashboard-lib": ["libs/dashboard-lib/src/index.ts"],
       "@flight-workspace/luggage/domain": ["libs/luggage/domain/src/index.ts"],
       "@flight-workspace/luggage/feature-checkin": [
         "libs/luggage/feature-checkin/src/index.ts"
       ],
       "@flight-workspace/luggage/feature-report-loss": [
         "libs/luggage/feature-report-loss/src/index.ts"
-      ]
+      ],
+      "@flight-workspace/shared/logger-lib": [
+        "libs/shared/logger-lib/src/index.ts"
+      ],
+      "@flight-workspace/flights/flight-lib": [
+        "libs/flights/flight-lib/src/index.ts"
+      ],
+      "@flight-workspace/dashboard/dashboard-lib": [
+        "libs/dashboard/dashboard-lib/src/index.ts"
+      ],
+      "@flight-workspace/shared/auth-lib": ["libs/shared/auth-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

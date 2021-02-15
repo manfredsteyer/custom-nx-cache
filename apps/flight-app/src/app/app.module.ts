@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
-import { FlightLibModule } from "@flight-workspace/flight-lib";
+import { FlightLibModule } from "@flight-workspace/flights/flight-lib";
 
 import { AppComponent } from "./app.component";
 import { APP_ROUTES } from "./app.routes";

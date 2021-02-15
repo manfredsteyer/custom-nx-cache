@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FakeFlightService, FlightService} from '@flight-workspace/flight-lib';
+import {FakeFlightService, FlightService} from '@flight-workspace/flights/flight-lib';
 
 @Component({
   selector: 'flight-search',

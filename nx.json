@@ -8,18 +8,6 @@
     "tsconfig.base.json": "*"
   },
   "projects": {
-    "flight-app-e2e": {
-      "tags": ["e2e"]
-    },
-    "flight-admin-e2e": {
-      "tags": ["e2e"]
-    },
-    "dashboard-e2e": {
-      "tags": ["e2e"]
-    },
-    "external-e2e": {
-      "tags": ["e2e"]
-    },
     "flight-app": {
       "tags": ["domain:flights"]
     },
@@ -32,30 +20,29 @@
     "external": {
       "tags": ["domain:external"]
     },
-    "logger-lib": {
-      "tags": ["domain:shared"]
-    },
-    "flight-lib": {
-      "tags": ["domain:flights", "type:domain-logic"]
-    },
-    "dashboard-lib": {
-      "tags": ["domain:dashboard", "type:domain-logic"]
-    },
     "luggage-domain": {
       "tags": ["domain:luggage", "type:domain-logic"]
     },
     "luggage": {
       "tags": ["domain:luggage", "type:app"]
     },
-    "luggage-e2e": {
-      "tags": [],
-      "implicitDependencies": ["luggage"]
-    },
     "luggage-feature-checkin": {
       "tags": ["domain:luggage", "type:feature"]
     },
     "luggage-feature-report-loss": {
       "tags": ["domain:luggage", "type:feature"]
+    },
+    "shared-logger-lib": {
+      "tags": ["domain:shared"]
+    },
+    "flights-flight-lib": {
+      "tags": ["domain:flights", "type:domain-logic"]
+    },
+    "dashboard-dashboard-lib": {
+      "tags": ["domain:dashboard", "type:domain-logic"]
+    },
+    "shared-auth-lib": {
+      "tags": []
     }
   },
   "--tasksRunnerOptions": {

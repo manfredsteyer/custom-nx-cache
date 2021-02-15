@@ -10,7 +10,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {Flight} from '@flight-workspace/flight-lib';
+import {Flight} from '@flight-workspace/flights/flight-lib';
 
 @Component({
   selector: 'flight-card',
