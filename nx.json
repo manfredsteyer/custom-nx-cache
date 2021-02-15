@@ -8,45 +8,31 @@
     "tsconfig.base.json": "*"
   },
   "projects": {
-    "flight-app": {
-      "tags": ["domain:flights"]
-    },
-    "flight-admin": {
-      "tags": ["domain:flights"]
-    },
-    "dashboard": {
-      "tags": ["domain:dashboard"]
-    },
-    "luggage-domain": {
-      "tags": ["domain:luggage", "type:domain-logic"]
-    },
-    "luggage": {
-      "tags": ["domain:luggage", "type:app"]
-    },
-    "luggage-feature-checkin": {
-      "tags": ["domain:luggage", "type:feature"]
-    },
+    "flight-app": { "tags": ["domain:flights"] },
+    "flight-admin": { "tags": ["domain:flights"] },
+    "dashboard": { "tags": ["domain:dashboard"] },
+    "luggage-domain": { "tags": ["domain:luggage", "type:domain-logic"] },
+    "luggage": { "tags": ["domain:luggage", "type:app"] },
+    "luggage-feature-checkin": { "tags": ["domain:luggage", "type:feature"] },
     "luggage-feature-report-loss": {
       "tags": ["domain:luggage", "type:feature"]
     },
-    "shared-logger-lib": {
-      "tags": ["domain:shared"]
-    },
-    "flights-flight-lib": {
-      "tags": ["domain:flights", "type:domain-logic"]
-    },
+    "shared-logger-lib": { "tags": ["domain:shared"] },
+    "flights-flight-lib": { "tags": ["domain:flights", "type:domain-logic"] },
     "dashboard-dashboard-lib": {
       "tags": ["domain:dashboard", "type:domain-logic"]
     },
-    "shared-auth-lib": {
-      "tags": []
-    }
+    "shared-auth-lib": { "tags": [] },
+    "test": { "tags": [] }
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      "runner": "./tools/task-runners/custom-task-runner",
+      "--runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { 
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "cacheDirectory": "c:\\temp\\cache",
+        "remoteDirectory": "c:\\temp\\remote-cache"
       }
     }
   },
@@ -65,7 +51,7 @@
       }
     }
   },
-  "affected": {
-    "defaultBase": "main"
-  }
+  "affected": { "defaultBase": "main" }
 }
+
+

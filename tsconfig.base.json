@@ -32,7 +32,10 @@
       "@flight-workspace/dashboard/dashboard-lib": [
         "libs/dashboard/dashboard-lib/src/index.ts"
       ],
-      "@flight-workspace/shared/auth-lib": ["libs/shared/auth-lib/src/index.ts"]
+      "@flight-workspace/shared/auth-lib": [
+        "libs/shared/auth-lib/src/index.ts"
+      ],
+      "@flight-workspace/test": ["libs/test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

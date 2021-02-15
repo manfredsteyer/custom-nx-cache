@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/luggage/feature-checkin',
     '<rootDir>/libs/luggage/feature-report-loss',
     '<rootDir>/libs/shared/auth-lib',
+    '<rootDir>/libs/test',
   ],
 };

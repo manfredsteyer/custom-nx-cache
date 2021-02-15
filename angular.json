@@ -54,9 +54,7 @@
               "buildOptimizer": true
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -82,10 +80,7 @@
               "apps/flight-app/tsconfig.app.json",
               "apps/flight-app/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/flight-app/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/flight-app/**/*"]
           }
         },
         "test": {
@@ -94,9 +89,7 @@
             "jestConfig": "apps/flight-app/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/flight-app"
-          ]
+          "outputs": ["coverage/apps/flight-app"]
         }
       }
     },
@@ -120,9 +113,7 @@
               "apps/dashboard/src/favicon.ico",
               "apps/dashboard/src/assets"
             ],
-            "styles": [
-              "apps/dashboard/src/styles.css"
-            ],
+            "styles": ["apps/dashboard/src/styles.css"],
             "scripts": [],
             "lazyModules": [
               "apps/dashboard/src/app/lazy-dashboard-tile/lazy-dashboard-tile.module"
@@ -152,9 +143,7 @@
               "buildOptimizer": true
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -180,10 +169,7 @@
               "apps/dashboard/tsconfig.app.json",
               "apps/dashboard/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/dashboard/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/dashboard/**/*"]
           }
         },
         "test": {
@@ -192,9 +178,7 @@
             "jestConfig": "apps/dashboard/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/dashboard"
-          ]
+          "outputs": ["coverage/apps/dashboard"]
         }
       }
     },
@@ -218,9 +202,7 @@
               "apps/flight-admin/src/favicon.ico",
               "apps/flight-admin/src/assets"
             ],
-            "styles": [
-              "apps/flight-admin/src/styles.css"
-            ],
+            "styles": ["apps/flight-admin/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -247,9 +229,7 @@
               "buildOptimizer": true
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -275,10 +255,7 @@
               "apps/flight-admin/tsconfig.app.json",
               "apps/flight-admin/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/flight-admin/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/flight-admin/**/*"]
           }
         },
         "test": {
@@ -287,9 +264,7 @@
             "jestConfig": "apps/flight-admin/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/flight-admin"
-          ]
+          "outputs": ["coverage/apps/flight-admin"]
         }
       }
     },
@@ -318,10 +293,7 @@
               "libs/luggage/domain/tsconfig.lib.json",
               "libs/luggage/domain/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/luggage/domain/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/luggage/domain/**/*"]
           }
         },
         "test": {
@@ -330,9 +302,7 @@
             "jestConfig": "libs/luggage/domain/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/luggage/domain"
-          ]
+          "outputs": ["coverage/libs/luggage/domain"]
         }
       },
       "schematics": {
@@ -365,9 +335,7 @@
               "apps/luggage/src/favicon.ico",
               "apps/luggage/src/assets"
             ],
-            "styles": [
-              "apps/luggage/src/styles.scss"
-            ],
+            "styles": ["apps/luggage/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -400,9 +368,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -429,10 +395,7 @@
               "apps/luggage/tsconfig.spec.json",
               "apps/luggage/tsconfig.editor.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/luggage/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/luggage/**/*"]
           }
         },
         "test": {
@@ -441,9 +404,7 @@
             "jestConfig": "apps/luggage/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/luggage"
-          ]
+          "outputs": ["coverage/apps/luggage"]
         }
       }
     },
@@ -484,9 +445,7 @@
             "jestConfig": "libs/luggage/feature-checkin/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/luggage/feature-checkin"
-          ]
+          "outputs": ["coverage/libs/luggage/feature-checkin"]
         }
       },
       "schematics": {
@@ -532,9 +491,7 @@
             "jestConfig": "libs/luggage/feature-report-loss/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/luggage/feature-report-loss"
-          ]
+          "outputs": ["coverage/libs/luggage/feature-report-loss"]
         }
       },
       "schematics": {
@@ -569,10 +526,7 @@
               "libs/shared/logger-lib/tsconfig.lib.json",
               "libs/shared/logger-lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/logger-lib/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/logger-lib/**/*"]
           }
         },
         "test": {
@@ -581,9 +535,7 @@
             "jestConfig": "libs/shared/logger-lib/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/shared/logger-lib"
-          ]
+          "outputs": ["coverage/libs/shared/logger-lib"]
         }
       },
       "schematics": {}
@@ -608,10 +560,7 @@
               "libs/flights/flight-lib/tsconfig.lib.json",
               "libs/flights/flight-lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/flights/flight-lib/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/flights/flight-lib/**/*"]
           }
         },
         "test": {
@@ -620,9 +569,7 @@
             "jestConfig": "libs/flights/flight-lib/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/flights/flight-lib"
-          ]
+          "outputs": ["coverage/libs/flights/flight-lib"]
         }
       },
       "schematics": {}
@@ -652,9 +599,7 @@
             "jestConfig": "libs/dashboard/dashboard-lib/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/dashboard/dashboard-lib"
-          ]
+          "outputs": ["coverage/libs/dashboard/dashboard-lib"]
         }
       },
       "schematics": {}
@@ -684,10 +629,7 @@
               "libs/shared/auth-lib/tsconfig.lib.json",
               "libs/shared/auth-lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/auth-lib/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/auth-lib/**/*"]
           }
         },
         "test": {
@@ -696,14 +638,49 @@
             "jestConfig": "libs/shared/auth-lib/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/shared/auth-lib"
-          ]
+          "outputs": ["coverage/libs/shared/auth-lib"]
         }
       },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "test": {
+      "projectType": "library",
+      "root": "libs/test",
+      "sourceRoot": "libs/test/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/test/tsconfig.lib.json",
+            "project": "libs/test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/test/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/test/src/**/*.ts",
+              "libs/test/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/test"],
+          "options": {
+            "jestConfig": "libs/test/jest.config.js",
+            "passWithNoTests": true
+          }
         }
       }
     }
@@ -713,11 +690,18 @@
   },
   "schematics": {
     "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
+      "style": "css",
+      "linter": "eslint",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
     }
   },
   "defaultProject": "flight-app"
