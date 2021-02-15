@@ -1,0 +1,87 @@
+{
+  "npmScope": "flight-workspace",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "projects": {
+    "flight-app-e2e": {
+      "tags": ["e2e"]
+    },
+    "flight-admin-e2e": {
+      "tags": ["e2e"]
+    },
+    "dashboard-e2e": {
+      "tags": ["e2e"]
+    },
+    "external-e2e": {
+      "tags": ["e2e"]
+    },
+    "flight-app": {
+      "tags": ["domain:flights"]
+    },
+    "flight-admin": {
+      "tags": ["domain:flights"]
+    },
+    "dashboard": {
+      "tags": ["domain:dashboard"]
+    },
+    "external": {
+      "tags": ["domain:external"]
+    },
+    "logger-lib": {
+      "tags": ["domain:shared"]
+    },
+    "flight-lib": {
+      "tags": ["domain:flights", "type:domain-logic"]
+    },
+    "dashboard-lib": {
+      "tags": ["domain:dashboard", "type:domain-logic"]
+    },
+    "luggage-domain": {
+      "tags": ["domain:luggage", "type:domain-logic"]
+    },
+    "luggage": {
+      "tags": ["domain:luggage", "type:app"]
+    },
+    "luggage-e2e": {
+      "tags": [],
+      "implicitDependencies": ["luggage"]
+    },
+    "luggage-feature-checkin": {
+      "tags": ["domain:luggage", "type:feature"]
+    },
+    "luggage-feature-report-loss": {
+      "tags": ["domain:luggage", "type:feature"]
+    }
+  },
+  "--tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@apployees-nx/level-task-runner",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "levelTaskRunnerOptions": {
+          "driver": "mongodown",
+          "host": "127.0.0.1",
+          "port": 27017,
+          "name": "cache",
+          "collection": "nx-cache"
+        }
+      }
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  }
+}
