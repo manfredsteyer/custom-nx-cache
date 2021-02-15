@@ -17,9 +17,6 @@
     "dashboard": {
       "tags": ["domain:dashboard"]
     },
-    "external": {
-      "tags": ["domain:external"]
-    },
     "luggage-domain": {
       "tags": ["domain:luggage", "type:domain-logic"]
     },
